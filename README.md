@@ -5,9 +5,11 @@ Deadline: 25.11.2026 23:59
 This is the fifth exercise, and it covers initial steps for doing a logistic regression task with scikit-learn. Reading documentation for [`pandas`](https://pandas.pydata.org/docs/reference/index.html) and [`scikit-learn`](https://scikit-learn.org/stable/modules/classes.html) is part of the exercise.
 
 ## Step 1
+
 Clone this repository to your local computer. On the command line, you would use the following command: `git clone https://github.com/Deep-Learning-UE-WS2627/exercise-05`.
 
 ## Step 2
+
 Create a new branch in the repository, named after your UzK-account: `git checkout -b "UZKACCOUNT"`
 
 ## Step 3: Preparations and data set
@@ -39,7 +41,7 @@ All of these can be done with existing `pandas`-functions. Feel free to browse t
 
 ## Step 4: Machine Learning
 
-We now have a nicely prepared data set and turn to the actual machine learning. This will be done using `scikit-learn`. It is good to look ahead a little bit: Logistic regression is implemented in a class called [`sklearn.linear_model.LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression). The class follows the "initialize-fit-predict"-design pattern (like most of the implementations we'll be seeing in this class). Thus: After creating an object of the class, you start the actual training using the `fit()` method. Once trained, you may use the `predict()` method to get new predictions. These methods expect feature values and training labels to be in two separate variabes, often called `x` (features) and `y` (training labels). In addition, you usually want to separate train and test data, thus, you end up with four variables to describe your data: `x_train`, `y_train`, `x_test`, `y_test` (obviously, you can name them differently, but I'd suggest to use a consistent scheme). 
+We now have a nicely prepared data set and turn to the actual machine learning. This will be done using `scikit-learn`. It is good to look ahead a little bit: Logistic regression is implemented in a class called [`sklearn.linear_model.LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression). The class follows the "initialize-fit-predict"-design pattern (like most of the implementations we'll be seeing in this class). Thus: After creating an object of the class, you start the actual training using the `fit()` method. Once trained, you may use the `predict()` method to get new predictions. These methods expect feature values and training labels to be in two separate variabes, often called `x` (features) and `y` (training labels). In addition, you usually want to separate train and test data, thus, you end up with four variables to describe your data: `x_train`, `y_train`, `x_test`, `y_test` (obviously, you can name them differently, but I'd suggest to use a consistent scheme).
 
 Back to the code:
 
@@ -49,4 +51,5 @@ Back to the code:
 4. Lastly, calculate precision/recall/f-score on the test data using the appropriate functions from `scikit-learn`.
 
 ## Step 5: Commit
+
 Commit your changes to your local repository and push them to the server.
