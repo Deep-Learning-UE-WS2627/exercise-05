@@ -9,7 +9,6 @@ from sklearn.model_selection import train_test_split
 df = pd.read_csv("data/train.csv")
 
 
-
 df = df.drop(columns=["Name","PassengerId"])
 
 df = df.dropna()
