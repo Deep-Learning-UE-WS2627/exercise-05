@@ -37,7 +37,7 @@ The file `titanic.py` contains initial code to read in the file from disk using 
 
 All of these can be done with existing `pandas`-functions. Feel free to browse the [documentation](https://pandas.pydata.org/docs/). If you know what you are looking for, you should consult [the API reference](https://pandas.pydata.org/docs/reference/index.html#api).
 
-## Step 4: Machine Learning
+## Step 4: Machine Learning 
 
 We now have a nicely prepared data set and turn to the actual machine learning. This will be done using `scikit-learn`. It is good to look ahead a little bit: Logistic regression is implemented in a class called [`sklearn.linear_model.LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression). The class follows the "initialize-fit-predict"-design pattern (like most of the implementations we'll be seeing in this class). Thus: After creating an object of the class, you start the actual training using the `fit()` method. Once trained, you may use the `predict()` method to get new predictions. These methods expect feature values and training labels to be in two separate variabes, often called `x` (features) and `y` (training labels). In addition, you usually want to separate train and test data, thus, you end up with four variables to describe your data: `x_train`, `y_train`, `x_test`, `y_test` (obviously, you can name them differently, but I'd suggest to use a consistent scheme). 
 

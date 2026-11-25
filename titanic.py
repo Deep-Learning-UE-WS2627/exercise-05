@@ -12,7 +12,7 @@ df = df.drop(columns=["Name","PassengerId"])
 
 df = df.dropna()
 
-non_numeric_cols = ["Gender","Cabin","Ticket","Embarked"]
+non_numeric_cols = ["Sex","Cabin","Ticket","Embarked"]
 df = pd.get_dummies(df, columns=non_numeric_cols, dtype=int)
 
 x = df.drop(columns=["Survived"])
