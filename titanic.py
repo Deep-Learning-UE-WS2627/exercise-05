@@ -8,12 +8,13 @@ from sklearn.model_selection import train_test_split
 # read the data from a CSV file (included in the repository)
 df = pd.read_csv("data/train.csv")
 
-
 df = df.drop(columns=["Name","PassengerId"])
 
+# drops all rows with NULL values from the DataFrame
 df = df.dropna()
 
 non_numeric_cols = ["Sex","Cabin","Ticket","Embarked"]
+# get_Dummies ersetzt jede nicht numerische Spalte durch die binären Werte 0|1 ersetzt.
 df = pd.get_dummies(df, columns=non_numeric_cols, dtype=int)
 
 x = df.drop(columns=["Survived"])
