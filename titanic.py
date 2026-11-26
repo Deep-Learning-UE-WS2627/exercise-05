@@ -1,44 +1,7 @@
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import f1_score, precision_score, recall_score
-from sklearn.model_selection import train_test_split
-
-
 
 # read the data from a CSV file (included in the repository)
 df = pd.read_csv("data/train.csv")
-
-df = df.drop(columns=["Name","PassengerId"])
-
-df = df.dropna()
-
-non_numeric_cols = ["Sex","Cabin","Ticket","Embarked"]
-df = pd.get_dummies(df, columns=non_numeric_cols, dtype=int)
-
-x = df.drop(columns=["Survived"])
-y = df["Survived"]
-
-x_train, x_test, y_train, y_test = train_test_split(
-    x, y, test_size=0.2, random_state=42
-
-)
-
-model = LogisticRegression(solver="liblinear")
-model.fit(x_train, y_train)
-
-y_pred = model.predict(x_test)
-
-precision = precision_score(y_test, y_pred)
-recall = recall_score(y_test, y_pred)
-f1 = f1_score(y_test, y_pred)
-
-print(f"Precision: {precision:.4f}")
-print(f"Recall: {recall:.4f}")
-print(f"F1-Score: {f1:.4f}")
-
-
- 
-# read the data from a CSV file (included in the repository)
 
 
 # ## Step 3
